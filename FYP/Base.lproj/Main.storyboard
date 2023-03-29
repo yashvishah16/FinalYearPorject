@@ -279,7 +279,8 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yz-El-xl5">
                                         <rect key="frame" x="0.0" y="0.0" width="242.33333333333334" height="81.666666666666671"/>
-                                        <string key="text">Your currentCO2 emission</string>
+                                        <string key="text">Your current
+CO2 emission</string>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -303,12 +304,57 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gOD-rq-5E9">
+                                <rect key="frame" x="33" y="761" width="327" height="56.666666666666629"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tM3-SU-glI">
+                                        <rect key="frame" x="0.0" y="0.0" width="67" height="56.666666666666664"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="18497442851530273523-128"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k4t-y5-jZ0">
+                                        <rect key="frame" x="87" y="0.0" width="66.666666666666686" height="56.666666666666664"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="8471584441553857633-128"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OIl-fn-c1B">
+                                        <rect key="frame" x="173.66666666666666" y="0.0" width="66.666666666666657" height="56.666666666666664"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="5796614481548336242-128"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J5c-gV-Sxc">
+                                        <rect key="frame" x="260.33333333333331" y="0.0" width="66.666666666666686" height="56.666666666666664"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="132352648716276482833764-128"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n33-4k-5IM">
+                                <rect key="frame" x="310.33333333333331" y="635.33333333333337" width="66.666666666666686" height="56.666666666666629"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="20340289291547546467-128"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="save-the-world" translatesAutoresizingMaskIntoConstraints="NO" id="v5J-Rx-Msd">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" red="0.322082798" green="0.56185567010000004" blue="0.33301334900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.322082798" green="0.56185567010000004" blue="0.33301334900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eS6-xw-5RM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="v5J-Rx-Msd" firstAttribute="top" secondItem="W9i-Pc-L85" secondAttribute="top" id="D38-Cu-WJJ"/>
+                            <constraint firstItem="gOD-rq-5E9" firstAttribute="centerX" secondItem="dno-tG-6iF" secondAttribute="centerX" id="Hhs-CD-fga"/>
+                            <constraint firstItem="v5J-Rx-Msd" firstAttribute="leading" secondItem="W9i-Pc-L85" secondAttribute="leading" id="KUa-oK-vLK"/>
+                            <constraint firstItem="gOD-rq-5E9" firstAttribute="leading" secondItem="eS6-xw-5RM" secondAttribute="leading" constant="33" id="RmC-wi-5eU"/>
+                            <constraint firstItem="n33-4k-5IM" firstAttribute="trailing" secondItem="W9i-Pc-L85" secondAttribute="trailingMargin" id="WeQ-yj-J6q"/>
                             <constraint firstItem="dno-tG-6iF" firstAttribute="top" secondItem="eS6-xw-5RM" secondAttribute="top" constant="42" id="ct1-G1-LMA"/>
+                            <constraint firstItem="gOD-rq-5E9" firstAttribute="top" secondItem="n33-4k-5IM" secondAttribute="bottom" constant="69" id="dPW-VN-aIN"/>
+                            <constraint firstAttribute="bottom" secondItem="n33-4k-5IM" secondAttribute="bottom" constant="160" id="iEF-dW-CZm"/>
+                            <constraint firstAttribute="bottom" secondItem="v5J-Rx-Msd" secondAttribute="bottom" id="liV-BJ-4TO"/>
+                            <constraint firstAttribute="trailing" secondItem="v5J-Rx-Msd" secondAttribute="trailing" id="m7t-Zh-dBg"/>
+                            <constraint firstItem="n33-4k-5IM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eS6-xw-5RM" secondAttribute="leading" symbolic="YES" id="p1w-sA-qbm"/>
                             <constraint firstItem="dno-tG-6iF" firstAttribute="leading" secondItem="eS6-xw-5RM" secondAttribute="leading" constant="35" id="qWa-on-XiZ"/>
                             <constraint firstItem="eS6-xw-5RM" firstAttribute="trailing" secondItem="dno-tG-6iF" secondAttribute="trailing" constant="35" id="tyU-HJ-Opd"/>
                         </constraints>
@@ -339,9 +385,14 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mwO-JL-UHk"/>
+        <segue reference="uuD-f3-vWx"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="132352648716276482833764-128" width="42.666667938232422" height="42.666667938232422"/>
+        <image name="18497442851530273523-128" width="42.666667938232422" height="42.666667938232422"/>
+        <image name="20340289291547546467-128" width="42.666667938232422" height="42.666667938232422"/>
+        <image name="5796614481548336242-128" width="42.666667938232422" height="42.666667938232422"/>
+        <image name="8471584441553857633-128" width="42.666667938232422" height="42.666667938232422"/>
         <image name="save-the-world" width="170.66667175292969" height="170.66667175292969"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
