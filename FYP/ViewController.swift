@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    //This is the initial commit for the project to git.
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
