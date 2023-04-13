@@ -333,6 +333,9 @@ CO2 emission</string>
                                 <rect key="frame" x="310.33333333333331" y="635.33333333333337" width="66.666666666666686" height="56.666666666666629"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="20340289291547546467-128"/>
+                                <connections>
+                                    <segue destination="t9F-I1-q2s" kind="show" id="Hkz-Y3-io5"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="save-the-world" translatesAutoresizingMaskIntoConstraints="NO" id="v5J-Rx-Msd">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -365,16 +368,16 @@ CO2 emission</string>
             </objects>
             <point key="canvasLocation" x="2633" y="110"/>
         </scene>
-        <!--View Controller-->
+        <!--Form View Controller-->
         <scene sceneID="b02-l2-TjU">
             <objects>
-                <viewController id="t9F-I1-q2s" sceneMemberID="viewController">
+                <viewController id="t9F-I1-q2s" customClass="FormViewController" customModule="FYP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zna-3g-lGx">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DF7-Eg-UYK">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0bF-Yg-oyl">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="2500"/>
@@ -412,48 +415,72 @@ which ones did you have today?</string>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="square"/>
+                                                <connections>
+                                                    <action selector="milkBtnTapped:" destination="t9F-I1-q2s" eventType="touchUpInside" id="3sS-Bk-l3e"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbI-7N-fYD">
                                                 <rect key="frame" x="41.000000000000007" y="272" width="66.666666666666686" height="57"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="square"/>
+                                                <connections>
+                                                    <action selector="vegBtnTapped:" destination="t9F-I1-q2s" eventType="touchUpInside" id="MEt-Qv-Hv8"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQ6-XY-1gj">
                                                 <rect key="frame" x="41.000000000000007" y="329" width="66.666666666666686" height="57"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="square"/>
+                                                <connections>
+                                                    <action selector="rootVegBtnTapped:" destination="t9F-I1-q2s" eventType="touchUpInside" id="QoC-ie-W8n"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GyH-kl-Ra0">
                                                 <rect key="frame" x="41.000000000000007" y="386" width="66.666666666666686" height="57"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="square"/>
+                                                <connections>
+                                                    <action selector="fruitsBtnTapped:" destination="t9F-I1-q2s" eventType="touchUpInside" id="gpx-Ao-EQz"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IcM-c0-qNC">
                                                 <rect key="frame" x="36.666666666666657" y="441" width="71" height="57"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="square"/>
+                                                <connections>
+                                                    <action selector="driedFruitsBtnTapped:" destination="t9F-I1-q2s" eventType="touchUpInside" id="ZAE-Qp-sIs"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OcB-wA-zDx">
                                                 <rect key="frame" x="41.000000000000007" y="498" width="66.666666666666686" height="57"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="square"/>
+                                                <connections>
+                                                    <action selector="breadBtnTapped:" destination="t9F-I1-q2s" eventType="touchUpInside" id="6hQ-kr-ooZ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oph-SV-7OV">
                                                 <rect key="frame" x="41.000000000000007" y="554" width="66.666666666666686" height="57"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="square"/>
+                                                <connections>
+                                                    <action selector="oatsBtnTapped:" destination="t9F-I1-q2s" eventType="touchUpInside" id="scv-hb-RM1"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k3e-3D-NiV">
                                                 <rect key="frame" x="41.000000000000007" y="611" width="66.666666666666686" height="57"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="square"/>
+                                                <connections>
+                                                    <action selector="nutellaBtnTapped:" destination="t9F-I1-q2s" eventType="touchUpInside" id="khJ-oN-qGc"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Milk" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXq-0M-IML">
                                                 <rect key="frame" x="126" y="230" width="39" height="27"/>
@@ -514,72 +541,108 @@ which ones did you have today?</string>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="square"/>
+                                                <connections>
+                                                    <action selector="butterBtnTapped:" destination="t9F-I1-q2s" eventType="touchUpInside" id="Dmk-zv-kTC"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fwa-kX-Kql">
                                                 <rect key="frame" x="41.000000000000007" y="721" width="66.666666666666686" height="57"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="square"/>
+                                                <connections>
+                                                    <action selector="peasBtnTapped:" destination="t9F-I1-q2s" eventType="touchUpInside" id="Eda-QH-goL"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t2i-x1-35J">
                                                 <rect key="frame" x="41.000000000000007" y="777" width="66.666666666666686" height="57"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="square"/>
+                                                <connections>
+                                                    <action selector="herbsBtnTapped:" destination="t9F-I1-q2s" eventType="touchUpInside" id="nIS-gw-UG4"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="doT-aO-mDy">
                                                 <rect key="frame" x="40.000000000000007" y="833" width="66.666666666666686" height="57"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="square"/>
+                                                <connections>
+                                                    <action selector="nutsBtnTapped:" destination="t9F-I1-q2s" eventType="touchUpInside" id="9ML-UG-si4"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1TX-1U-WPB">
                                                 <rect key="frame" x="40.000000000000007" y="887" width="66.666666666666686" height="57"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="square"/>
+                                                <connections>
+                                                    <action selector="yogurtBtnTapped:" destination="t9F-I1-q2s" eventType="touchUpInside" id="w0g-Ox-MQP"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XhA-IF-fQy">
                                                 <rect key="frame" x="40.000000000000007" y="941" width="66.666666666666686" height="57"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="square"/>
+                                                <connections>
+                                                    <action selector="mushroomsBtnTapped:" destination="t9F-I1-q2s" eventType="touchUpInside" id="gff-ri-jgu"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ncw-ka-Fuj">
                                                 <rect key="frame" x="40.000000000000007" y="997" width="66.666666666666686" height="57"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="square"/>
+                                                <connections>
+                                                    <action selector="tunaBtnTapped:" destination="t9F-I1-q2s" eventType="touchUpInside" id="7Ff-Lx-JNf"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrn-uT-G5P">
                                                 <rect key="frame" x="43.000000000000007" y="1062" width="64.666666666666686" height="57"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="square"/>
+                                                <connections>
+                                                    <action selector="chickenBtnTapped:" destination="t9F-I1-q2s" eventType="touchUpInside" id="ouW-0H-99w"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcc-ev-2d8">
                                                 <rect key="frame" x="40.000000000000007" y="1127" width="66.666666666666686" height="57"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="square"/>
+                                                <connections>
+                                                    <action selector="baconBtnTapped:" destination="t9F-I1-q2s" eventType="touchUpInside" id="tm2-aU-Avm"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4T-mb-v0T">
                                                 <rect key="frame" x="38.666666666666657" y="1192" width="67" height="57"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="square"/>
+                                                <connections>
+                                                    <action selector="steakBtnTapped:" destination="t9F-I1-q2s" eventType="touchUpInside" id="oY8-6K-v8J"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hi2-mK-gv2">
                                                 <rect key="frame" x="42.000000000000007" y="1366" width="66.666666666666686" height="57"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="square"/>
+                                                <connections>
+                                                    <action selector="flightBtnTapped:" destination="t9F-I1-q2s" eventType="touchUpInside" id="CJd-fd-U2S"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLd-i7-gNA">
                                                 <rect key="frame" x="42.000000000000007" y="1422" width="65.666666666666686" height="57"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="square"/>
+                                                <connections>
+                                                    <action selector="trainBtnTapped:" destination="t9F-I1-q2s" eventType="touchUpInside" id="LHR-xL-46W"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peas/Lentils/Beans" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEb-sa-Zga">
                                                 <rect key="frame" x="127" y="739" width="179" height="27"/>
@@ -632,7 +695,8 @@ which ones did you have today?</string>
                                                     <constraint firstAttribute="height" constant="55" id="aIt-AY-6aU"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="321" id="lM9-bH-pXp"/>
                                                 </constraints>
-                                                <string key="text">Which mode of travel did you use today?</string>
+                                                <string key="text">Which mode of travel did you use 
+today?</string>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -648,12 +712,18 @@ which ones did you have today?</string>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="square"/>
+                                                <connections>
+                                                    <action selector="busBtnTapped:" destination="t9F-I1-q2s" eventType="touchUpInside" id="WKW-ti-4UE"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="957-pM-8hv">
                                                 <rect key="frame" x="39.666666666666657" y="1535" width="65" height="57"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="square"/>
+                                                <connections>
+                                                    <action selector="carBtnTapped:" destination="t9F-I1-q2s" eventType="touchUpInside" id="WFK-wa-qLM"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGf-e5-CMg">
                                                 <rect key="frame" x="40.000000000000007" y="1591" width="66.666666666666686" height="57"/>
@@ -663,6 +733,9 @@ which ones did you have today?</string>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="square"/>
+                                                <connections>
+                                                    <action selector="bicycleBtnTapped:" destination="t9F-I1-q2s" eventType="touchUpInside" id="dkj-Ta-1O0"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Train" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6l8-Ev-u4e">
                                                 <rect key="frame" x="127" y="1440" width="47" height="27"/>
@@ -712,7 +785,8 @@ which ones did you have today?</string>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="326" id="5pa-3L-jgb"/>
                                                     <constraint firstAttribute="height" constant="55" id="qPU-72-oYp"/>
                                                 </constraints>
-                                                <string key="text">Did you use atleast half a garbage bag today?</string>
+                                                <string key="text">Did you use atleast half a garbage 
+bag today?</string>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -725,12 +799,18 @@ which ones did you have today?</string>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="circle"/>
+                                                <connections>
+                                                    <action selector="yesGarbageBtnTapped:" destination="t9F-I1-q2s" eventType="touchUpInside" id="e3W-mv-5tz"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t5T-jz-6Pa">
                                                 <rect key="frame" x="36" y="2102" width="67" height="57"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="circle"/>
+                                                <connections>
+                                                    <action selector="yesElectricityBtnTapped:" destination="t9F-I1-q2s" eventType="touchUpInside" id="ZuJ-q4-Fpm"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPe-wx-Qq8">
                                                 <rect key="frame" x="38.666666666666657" y="1961" width="67" height="57"/>
@@ -740,6 +820,9 @@ which ones did you have today?</string>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="circle"/>
+                                                <connections>
+                                                    <action selector="noGarbageBtnTapped:" destination="t9F-I1-q2s" eventType="touchUpInside" id="w0m-Mg-Gdh"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQX-su-Xbf">
                                                 <rect key="frame" x="36" y="2167" width="67" height="57"/>
@@ -749,6 +832,9 @@ which ones did you have today?</string>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="circle"/>
+                                                <connections>
+                                                    <action selector="noElectricityBtnTapped:" destination="t9F-I1-q2s" eventType="touchUpInside" id="CpY-he-kyp"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scM-mM-cvN">
                                                 <rect key="frame" x="126" y="1914" width="34" height="27"/>
@@ -1040,7 +1126,40 @@ which ones did you have today?</string>
                             <constraint firstItem="0bF-Yg-oyl" firstAttribute="width" secondItem="zna-3g-lGx" secondAttribute="width" multiplier="0.610687" id="xXy-aj-c51"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="DeD-rV-hXZ"/>
                     <size key="freeformSize" width="393" height="852"/>
+                    <connections>
+                        <outlet property="baconBtn" destination="qcc-ev-2d8" id="oaO-9M-E4F"/>
+                        <outlet property="bicycleBtn" destination="TGf-e5-CMg" id="c92-cI-7gb"/>
+                        <outlet property="breadBtn" destination="OcB-wA-zDx" id="Cmz-Dr-JuO"/>
+                        <outlet property="busBtn" destination="wjv-uX-D9A" id="8JZ-yQ-Qj8"/>
+                        <outlet property="butterBtn" destination="Ljg-a6-KLZ" id="k5I-A0-KPC"/>
+                        <outlet property="carBtn" destination="957-pM-8hv" id="qv1-VQ-AwR"/>
+                        <outlet property="chickenBtn" destination="xrn-uT-G5P" id="lrk-k0-p2J"/>
+                        <outlet property="dietType" destination="yYe-so-CZD" id="75M-Te-ocq"/>
+                        <outlet property="distanceTravelled" destination="v5Y-fQ-18D" id="dMj-dn-6oV"/>
+                        <outlet property="driedFruitsBtn" destination="IcM-c0-qNC" id="oMb-hW-UaS"/>
+                        <outlet property="flightBtn" destination="Hi2-mK-gv2" id="az9-Nt-aXl"/>
+                        <outlet property="fruitsBtn" destination="GyH-kl-Ra0" id="D99-vj-Nhc"/>
+                        <outlet property="herbsBtn" destination="t2i-x1-35J" id="pe8-Ef-T6z"/>
+                        <outlet property="milkBtn" destination="bHz-fq-gjd" id="m9u-wA-Kst"/>
+                        <outlet property="mushroomsBtn" destination="XhA-IF-fQy" id="7Wd-FA-nFc"/>
+                        <outlet property="noElectrictyBtn" destination="XQX-su-Xbf" id="mzm-2c-zUa"/>
+                        <outlet property="noGarbageBtn" destination="ZPe-wx-Qq8" id="wtC-pA-lSV"/>
+                        <outlet property="nutellaBtn" destination="k3e-3D-NiV" id="SGX-D7-ITv"/>
+                        <outlet property="nutsBtn" destination="doT-aO-mDy" id="bVn-fi-ogj"/>
+                        <outlet property="oatsCerealBtn" destination="oph-SV-7OV" id="Xrm-9T-pxF"/>
+                        <outlet property="peasBtn" destination="Fwa-kX-Kql" id="zIf-JN-DWx"/>
+                        <outlet property="rootVegBtn" destination="XQ6-XY-1gj" id="yoy-Qi-Mi8"/>
+                        <outlet property="screenTime" destination="cZO-sL-w36" id="yHz-oy-boB"/>
+                        <outlet property="steakBtn" destination="r4T-mb-v0T" id="Oy1-Ho-C01"/>
+                        <outlet property="trainBtn" destination="FLd-i7-gNA" id="Sip-8H-Z29"/>
+                        <outlet property="tunaBtn" destination="Ncw-ka-Fuj" id="fE6-Gy-EYG"/>
+                        <outlet property="vegetablesBtn" destination="rbI-7N-fYD" id="dO9-3J-OF9"/>
+                        <outlet property="yesElectrictyBtn" destination="t5T-jz-6Pa" id="S5L-i5-b49"/>
+                        <outlet property="yesGarbageBtn" destination="5pO-uM-lXs" id="4Sx-xK-Ycp"/>
+                        <outlet property="yogurtBtn" destination="1TX-1U-WPB" id="Cbo-Ou-CmD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZQn-7J-eF3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
