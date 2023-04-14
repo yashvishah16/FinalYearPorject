@@ -6,9 +6,19 @@
 //
 
 import UIKit
+//this variable stores the total carbon footprint of the user which would then be updated on the home page
+var toalCF = 0
 
+//these three variables are to keep track of each category's carbon footprint in kg CO2 emissions
+//these would then be used to form the chart for statistics page
+var foodCF = 0
+var travelCF = 0
+var energyCF = 0
 class FormViewController: UIViewController {
-
+    
+    //stores the kg CO2 emitted per km for the 5 modes of travel
+    var modeTravel = 0
+    
     //this field stores the user's diet type
     @IBOutlet weak var dietType: UITextField!
     
@@ -133,6 +143,9 @@ class FormViewController: UIViewController {
             sender.isSelected = false
             flag1 = false
         }
+        //milk = 0.4kg CO2e
+        //foodCF is going to be updated in grams CO2e
+        foodCF += 400
     }
     
     @IBAction func vegBtnTapped(_ sender: UIButton) {
@@ -146,6 +159,9 @@ class FormViewController: UIViewController {
             sender.isSelected = false
             flag2 = false
         }
+        // average of all vegetables from the referenced website = 2.58kg CO2e
+        //foodCF is going to be updated in grams CO2e
+        foodCF += 2580
     }
     
     @IBAction func rootVegBtnTapped(_ sender: UIButton) {
@@ -159,6 +175,9 @@ class FormViewController: UIViewController {
             sender.isSelected = false
             flag3 = false
         }
+        //average of all root vegetables from the referenced website = 0.4kg CO2e
+        //foodCF is going to be updated in grams CO2e
+        foodCF += 400
     }
     
     @IBAction func fruitsBtnTapped(_ sender: UIButton) {
@@ -172,6 +191,9 @@ class FormViewController: UIViewController {
             sender.isSelected = false
             flag4 = false
         }
+        //average of all fruits from the referenced website = 7.925kg CO2e
+        //foodCF is going to be updated in grams CO2e
+        foodCF += 7925
     }
     
     @IBAction func driedFruitsBtnTapped(_ sender: UIButton) {
@@ -185,6 +207,9 @@ class FormViewController: UIViewController {
             sender.isSelected = false
             flag5 = false
         }
+        //dried fruits = 2.9kg CO2e
+        //foodCF is going to be updated in grams CO2e
+        foodCF += 2900
     }
     
     @IBAction func breadBtnTapped(_ sender: UIButton) {
@@ -198,6 +223,9 @@ class FormViewController: UIViewController {
             sender.isSelected = false
             flag6 = false
         }
+        //bread = 1.1kg CO2e
+        //foodCF is going to be updated in grams CO2e
+        foodCF += 1100
     }
     
     @IBAction func oatsBtnTapped(_ sender: UIButton) {
@@ -211,6 +239,9 @@ class FormViewController: UIViewController {
             sender.isSelected = false
             flag7 = false
         }
+        //(oats + cereal)/2 = (1.3+1.6)/2 = 1.45kg CO2e
+        //foodCF is going to be updated in grams CO2e
+        foodCF += 1450
     }
     
     @IBAction func nutellaBtnTapped(_ sender: UIButton) {
@@ -224,6 +255,9 @@ class FormViewController: UIViewController {
             sender.isSelected = false
             flag8 = false
         }
+        //(nutella + jam + honey)/3 = (2.3 + 2.3 + 2.4)/3 = 2.34kgCO2e
+        //foodCF is going to be updated in grams CO2e
+        foodCF += 2340
     }
     
     @IBAction func butterBtnTapped(_ sender: UIButton) {
@@ -237,6 +271,9 @@ class FormViewController: UIViewController {
             sender.isSelected = false
             flag9 = false
         }
+        //(butter + paneer + cheese + tofu)/4 = (9.8 + 2.1 + 13.34 + 1.5)/4 = 6.685kg CO2e
+        //foodCF is going to be updated in grams CO2e
+        foodCF += 6685
     }
     
     @IBAction func peasBtnTapped(_ sender: UIButton) {
@@ -250,6 +287,9 @@ class FormViewController: UIViewController {
             sender.isSelected = false
             flag10 = false
         }
+        //peas, lentils, chickpeas, beans = 2.1kg CO2e
+        //foodCF is going to be updated in grams CO2e
+        foodCF += 2100
     }
     
     @IBAction func herbsBtnTapped(_ sender: UIButton) {
@@ -263,6 +303,9 @@ class FormViewController: UIViewController {
             sender.isSelected = false
             flag11 = false
         }
+        //herbs & spices = 2.1kg CO2e
+        //foodCF is going to be updated in grams CO2e
+        foodCF += 2100
     }
     
     @IBAction func nutsBtnTapped(_ sender: UIButton) {
@@ -276,6 +319,9 @@ class FormViewController: UIViewController {
             sender.isSelected = false
             flag12 = false
         }
+        //nuts & seeds = 2.1kg CO2e
+        //foodCF is going to be updated in grams CO2e
+        foodCF += 2300
     }
     
     @IBAction func yogurtBtnTapped(_ sender: UIButton) {
@@ -289,6 +335,9 @@ class FormViewController: UIViewController {
             sender.isSelected = false
             flag13 = false
         }
+        //(yogurt + cream + chocolate)/3 = (2.4 + 5.9 + 2.4)/3 = 3.57kg CO2e
+        //foodCF is going to be updated in grams CO2e
+        foodCF += 3570
     }
     
     @IBAction func mushroomsBtnTapped(_ sender: UIButton) {
@@ -302,6 +351,9 @@ class FormViewController: UIViewController {
             sender.isSelected = false
             flag14 = false
         }
+        //(mushrooms + prawns + shrimp)/3 = (4.1 + 25 + 3.8)/3 = 10.97kg CO2e
+        //foodCF is going to be updated in grams CO2e
+        foodCF += 10970
     }
     
     @IBAction func tunaBtnTapped(_ sender: UIButton) {
@@ -315,6 +367,9 @@ class FormViewController: UIViewController {
             sender.isSelected = false
             flag15 = false
         }
+        //tuna = 22kg CO2e
+        //foodCF is going to be updated in grams CO2e
+        foodCF += 2200
     }
     
     @IBAction func chickenBtnTapped(_ sender: UIButton) {
@@ -328,6 +383,9 @@ class FormViewController: UIViewController {
             sender.isSelected = false
             flag16 = false
         }
+        //chicken = 8.1kg CO2e
+        //foodCF is going to be updated in grams CO2e
+        foodCF += 8100
     }
     
     @IBAction func baconBtnTapped(_ sender: UIButton) {
@@ -341,6 +399,9 @@ class FormViewController: UIViewController {
             sender.isSelected = false
             flag17 = false
         }
+        //(bacon + eggs)/2 = (10 + 19.1)/2 = 14.55kg CO2e
+        //foodCF is going to be updated in grams CO2e
+        foodCF += 14550
     }
     
     @IBAction func steakBtnTapped(_ sender: UIButton) {
@@ -354,6 +415,9 @@ class FormViewController: UIViewController {
             sender.isSelected = false
             flag18 = false
         }
+        //steak = 83.3kg CO2e
+        //foodCF is going to be updated in grams CO2e
+        foodCF += 83300
     }
     
     //these are 5 custom checklist buttons for storing and calculating user's carbon footprint based on their mode of travel for the day
@@ -368,6 +432,8 @@ class FormViewController: UIViewController {
             sender.isSelected = false
             flag19 = false
         }
+        //CO2 emissions from aviation fuel per passenger per km is 115g
+        modeTravel += 115
     }
     
     @IBAction func trainBtnTapped(_ sender: UIButton) {
@@ -381,6 +447,8 @@ class FormViewController: UIViewController {
             sender.isSelected = false
             flag20 = false
         }
+        //CO2 emissions from train or national rail per km is 34.5g
+        modeTravel += 35
     }
     
     @IBAction func busBtnTapped(_ sender: UIButton) {
@@ -394,6 +462,8 @@ class FormViewController: UIViewController {
             sender.isSelected = false
             flag21 = false
         }
+        //CO2 emissions from bus per km is 102.27g
+        modeTravel += 102
     }
     
     @IBAction func carBtnTapped(_ sender: UIButton) {
@@ -407,6 +477,9 @@ class FormViewController: UIViewController {
             sender.isSelected = false
             flag22 = false
         }
+        //CO2 emissions from car(BEV) is not considered as it is out of scope
+        //CO2 emissions from car(petrol&diesel) per km is 170.64g
+        modeTravel += 171
     }
     
     @IBAction func bicycleBtnTapped(_ sender: UIButton) {
@@ -420,6 +493,8 @@ class FormViewController: UIViewController {
             sender.isSelected = false
             flag23 = false
         }
+        //CO2 emissions from bicycle per km is 113.55g
+        modeTravel += 113
     }
     
     //these radiobuttons are to calculate and store the user's carbon footprint based on the garbage used for the day
@@ -435,6 +510,10 @@ class FormViewController: UIViewController {
             sender.isSelected = false
             flag24 = false
         }
+        //CO2 emissions for an aevrage can is 700g per 1kg of non-recycled waste
+        //an average half of a garbage can is 15kg
+        //energyCF is updated in grams of CO2e
+        energyCF += 10500
     }
     
     @IBAction func noGarbageBtnTapped(_ sender: UIButton) {
@@ -464,6 +543,9 @@ class FormViewController: UIViewController {
             sender.isSelected = false
             flag26 = false
         }
+        //CO2 emissions for average household electricty per day is 9.5kWh where 1kWh = 0.185kg
+        //energyCF is updated in grams of CO2e
+        energyCF += 1780
     }
     
     @IBAction func noElectricityBtnTapped(_ sender: UIButton) {
@@ -479,6 +561,40 @@ class FormViewController: UIViewController {
             flag27 = false
         }
     }
+    
+    @IBAction func submitBtnTapped(_ sender: UIButton) {
+        //converting foodCF value from grams to kilograms
+        foodCF = foodCF/1000
+        print("The food carbon footprint is \(foodCF)")
+        
+        //converting a string of numeric input for diatnce travelled to integer value
+        let distance: Int? = Int(distanceTravelled.text!)
+        //the total travel carbon footprint would be the mode of travel selected by the user x the distance travelled in km
+        travelCF = modeTravel * distance!
+        
+        //converting travelCF value from grams to kilograms
+        travelCF = travelCF/1000
+        print("The travel carbon footprint is\(travelCF)")
+        
+        //converting a string of numeric input for screen time by user to integer format
+        let screen: Int? = Int(screenTime.text!)
+        
+        var screenCF = 0
+        var totalScreenCF = 0
+        //0.17kg CO2 is emitted for smartphone usage per hour
+        //screenCF is updated in grams of CO2e for smartphone usage per hour
+        screenCF += 1700
+        
+        //total screen time would be kg CO2 emitted per hour * number of hours of screen time used by the user
+        totalScreenCF = screenCF * screen!
+        
+        energyCF += totalScreenCF
+        
+        //converting energyCF value from grams to kilograms
+        energyCF = energyCF/1000
+        print("The energy carbon footprint is\(energyCF)")
+        
+    }
     /*
     // MARK: - Navigation
 
@@ -488,7 +604,7 @@ class FormViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
 
 //this is to make the distanceTravelled and screenTime text fields accept only numeric data i.e. number of km for distanceTravelled and number of hours for screenTime
