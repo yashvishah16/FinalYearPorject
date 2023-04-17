@@ -18,6 +18,12 @@ class StatisticsViewController: UIViewController {
     
     @IBOutlet weak var ukPieChart: PieChartView!
     
+    @IBOutlet weak var foodText: UITextView!
+    
+    @IBOutlet weak var travelText: UITextView!
+    
+    @IBOutlet weak var energyText: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -44,7 +50,9 @@ class StatisticsViewController: UIViewController {
         ukPieChart.data = ukpieChartData
         ukPieChart.legend.enabled = false
         
-        // Do any additional setup after loading the view.
+        foodText.text = String(variable1)
+        travelText.text = String(variable2)
+        energyText.text = String(variable3)
     }
     /*
     // MARK: - Navigation

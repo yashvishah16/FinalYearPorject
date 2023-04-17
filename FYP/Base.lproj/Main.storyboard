@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -1207,11 +1208,6 @@ bag today?</string>
                                 </subviews>
                                 <viewLayoutGuide key="safeArea" id="lRN-B3-S3p"/>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="save-the-world" translatesAutoresizingMaskIntoConstraints="NO" id="fnK-WW-EaU">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                                <color key="backgroundColor" red="0.26889481300000001" green="0.46907216489999998" blue="0.27802031890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O0L-Cx-mJ4" customClass="PieChartView" customModule="Charts">
                                 <rect key="frame" x="9" y="140" width="185" height="200"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1230,22 +1226,175 @@ bag today?</string>
                                     <constraint firstAttribute="height" constant="200" id="j56-vw-F4M"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Carbon Footprint" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fC-Xp-BVE">
+                                <rect key="frame" x="16.666666666666671" y="111" width="170" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="pBe-Mo-lZo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFq-GG-a1e">
+                                <rect key="frame" x="194.66666666666663" y="111" width="195.33333333333337" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="car-l3-0Pu"/>
+                                </constraints>
+                                <string key="text">Average Individual Carbon
+ Footprint per day in the UK</string>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Carbon Footprint Divided By Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hov-Nq-O6e">
+                                <rect key="frame" x="31" y="348" width="367" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="344" id="Gnp-tk-E21"/>
+                                    <constraint firstAttribute="height" constant="30" id="Xia-GI-a3Z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food(kg CO2e)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOC-OG-ytW">
+                                <rect key="frame" x="43" y="381" width="117" height="20.333333333333314"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="food"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CYO-BZ-Igh">
+                                <rect key="frame" x="43" y="400" width="117" height="58"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="k3z-o5-eN7"/>
+                                </constraints>
+                                <color key="textColor" name="food"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Travel(kg CO2e)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhX-hO-gyZ">
+                                <rect key="frame" x="223" y="381" width="124" height="20.333333333333314"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="travel"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gj9-tf-rVl">
+                                <rect key="frame" x="223" y="400" width="124" height="58"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" name="travel"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Energy(kg CO2e)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDa-eB-fAB">
+                                <rect key="frame" x="125.66666666666667" y="466" width="140.66666666666663" height="20.333333333333314"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="energy"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="57W-am-R7a">
+                                <rect key="frame" x="130" y="486" width="132" height="57"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="kIA-zg-2US"/>
+                                </constraints>
+                                <color key="textColor" name="energy"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Imapct On The Environment " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ZH-8j-qtU">
+                                <rect key="frame" x="87.666666666666671" y="561" width="216.66666666666663" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwE-FG-jpS">
+                                <rect key="frame" x="9" y="589" width="381" height="126"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="126" id="7Rl-8x-Hs4"/>
+                                </constraints>
+                                <string key="text">An average individual's carbon footprint in the UK is about 10 metric tons of CO2e per year. Most of this comes from dozens of daily actions and long term lifestyle chocies including diet type, mode of transport and electricity. To help UK reach net zero by 2050, you as an individual can help by making small yet consistent lifestyle changes.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gg4-dY-tds">
+                                <rect key="frame" x="108.33333333333333" y="721" width="175.33333333333337" height="40.333333333333371"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Make Changes">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle2"/>
+                                    <color key="baseForegroundColor" red="0.33390235019999998" green="0.58247422680000005" blue="0.3452340223" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="DeF-HP-qV7" kind="show" id="yid-hs-03Y"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="save-the-world" translatesAutoresizingMaskIntoConstraints="NO" id="fnK-WW-EaU">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" red="0.26889481300000001" green="0.46907216489999998" blue="0.27802031890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ybu-tb-1CB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="57W-am-R7a" firstAttribute="leading" secondItem="ybu-tb-1CB" secondAttribute="leading" constant="130" id="2ul-Jo-Jdh"/>
                             <constraint firstItem="O0L-Cx-mJ4" firstAttribute="leading" secondItem="1wE-CU-zHC" secondAttribute="leadingMargin" constant="-7" id="5qr-cC-jxP"/>
+                            <constraint firstItem="gj9-tf-rVl" firstAttribute="trailing" secondItem="qjT-tg-fGq" secondAttribute="trailing" id="6dg-sh-mFf"/>
+                            <constraint firstItem="57W-am-R7a" firstAttribute="top" secondItem="CYO-BZ-Igh" secondAttribute="bottom" constant="28" id="7X4-sQ-Aq5"/>
+                            <constraint firstItem="CYO-BZ-Igh" firstAttribute="leading" secondItem="zOC-OG-ytW" secondAttribute="leading" id="86W-QH-J0h"/>
+                            <constraint firstItem="CYO-BZ-Igh" firstAttribute="trailing" secondItem="zOC-OG-ytW" secondAttribute="trailing" id="8R3-ly-hVb"/>
                             <constraint firstAttribute="trailing" secondItem="fnK-WW-EaU" secondAttribute="trailing" id="9BD-eK-wQL"/>
+                            <constraint firstItem="aFq-GG-a1e" firstAttribute="leading" secondItem="mnC-23-3Go" secondAttribute="leading" constant="-7.3333333333333712" id="9ez-5y-xKf"/>
+                            <constraint firstItem="CYO-BZ-Igh" firstAttribute="bottom" secondItem="gj9-tf-rVl" secondAttribute="bottom" id="Bcd-1w-iL6"/>
                             <constraint firstItem="O0L-Cx-mJ4" firstAttribute="top" secondItem="ybu-tb-1CB" secondAttribute="top" constant="37" id="C1O-S4-6F3"/>
+                            <constraint firstItem="57W-am-R7a" firstAttribute="centerX" secondItem="fDa-eB-fAB" secondAttribute="centerX" id="Cma-qm-usS"/>
+                            <constraint firstItem="hov-Nq-O6e" firstAttribute="leading" secondItem="ybu-tb-1CB" secondAttribute="leading" constant="31" id="GCc-pB-03Z"/>
+                            <constraint firstItem="gj9-tf-rVl" firstAttribute="leading" secondItem="CYO-BZ-Igh" secondAttribute="trailing" constant="63" id="JfG-5D-hgV"/>
                             <constraint firstAttribute="bottom" secondItem="fnK-WW-EaU" secondAttribute="bottom" id="JmQ-U4-JBO"/>
+                            <constraint firstItem="CYO-BZ-Igh" firstAttribute="top" secondItem="hov-Nq-O6e" secondAttribute="bottom" constant="22" id="LDf-X0-nEn"/>
                             <constraint firstItem="fnK-WW-EaU" firstAttribute="top" secondItem="1wE-CU-zHC" secondAttribute="top" id="Msg-yq-dgo"/>
+                            <constraint firstItem="CYO-BZ-Igh" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zOC-OG-ytW" secondAttribute="trailing" id="NvP-lE-mdc"/>
+                            <constraint firstItem="ybu-tb-1CB" firstAttribute="trailing" secondItem="aFq-GG-a1e" secondAttribute="trailing" constant="3" id="PhQ-9R-nVo"/>
+                            <constraint firstItem="aFq-GG-a1e" firstAttribute="firstBaseline" secondItem="5fC-Xp-BVE" secondAttribute="baseline" id="PkD-9g-Qgw"/>
+                            <constraint firstItem="gj9-tf-rVl" firstAttribute="centerX" secondItem="WhX-hO-gyZ" secondAttribute="centerX" id="QI1-Z1-WJt"/>
+                            <constraint firstItem="5fC-Xp-BVE" firstAttribute="centerX" secondItem="O0L-Cx-mJ4" secondAttribute="centerX" id="TGq-uL-33N"/>
+                            <constraint firstItem="WhX-hO-gyZ" firstAttribute="leading" secondItem="gj9-tf-rVl" secondAttribute="leading" id="TO8-WB-JrI"/>
+                            <constraint firstItem="zOC-OG-ytW" firstAttribute="firstBaseline" secondItem="WhX-hO-gyZ" secondAttribute="firstBaseline" id="Xw9-6A-pQH"/>
+                            <constraint firstItem="hov-Nq-O6e" firstAttribute="top" secondItem="O0L-Cx-mJ4" secondAttribute="bottom" constant="8" symbolic="YES" id="YCc-rm-bqs"/>
                             <constraint firstItem="fnK-WW-EaU" firstAttribute="leading" secondItem="1wE-CU-zHC" secondAttribute="leading" id="YhV-TU-SFe"/>
+                            <constraint firstItem="zOC-OG-ytW" firstAttribute="centerY" secondItem="WhX-hO-gyZ" secondAttribute="centerY" id="Ypa-uU-mvI"/>
                             <constraint firstItem="mnC-23-3Go" firstAttribute="leading" secondItem="O0L-Cx-mJ4" secondAttribute="trailing" constant="8" id="fv3-e2-rl9"/>
+                            <constraint firstItem="Gg4-dY-tds" firstAttribute="leading" secondItem="ybu-tb-1CB" secondAttribute="leading" constant="108.33333333333331" id="gp1-a3-k8u"/>
+                            <constraint firstItem="Gg4-dY-tds" firstAttribute="centerX" secondItem="4ZH-8j-qtU" secondAttribute="centerX" id="gqv-XQ-OP9"/>
+                            <constraint firstItem="4ZH-8j-qtU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5fC-Xp-BVE" secondAttribute="leading" id="gvg-Hz-nSf"/>
+                            <constraint firstItem="gwE-FG-jpS" firstAttribute="top" secondItem="4ZH-8j-qtU" secondAttribute="bottom" constant="7.6666666666666288" id="hRJ-Ox-0oM"/>
+                            <constraint firstItem="Gg4-dY-tds" firstAttribute="top" secondItem="gwE-FG-jpS" secondAttribute="bottom" constant="6" id="hvt-ac-R04"/>
+                            <constraint firstItem="zOC-OG-ytW" firstAttribute="baseline" secondItem="WhX-hO-gyZ" secondAttribute="firstBaseline" id="i0J-wz-wK4"/>
+                            <constraint firstItem="fDa-eB-fAB" firstAttribute="centerX" secondItem="qjT-tg-fGq" secondAttribute="centerX" id="jRN-vo-Vgn"/>
+                            <constraint firstItem="zOC-OG-ytW" firstAttribute="top" secondItem="hov-Nq-O6e" secondAttribute="bottom" constant="3" id="jlX-bB-kPE"/>
+                            <constraint firstItem="CYO-BZ-Igh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zOC-OG-ytW" secondAttribute="leading" id="kKC-Vx-d3A"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hov-Nq-O6e" secondAttribute="trailing" constant="-21" id="l6E-8p-6id"/>
                             <constraint firstItem="mnC-23-3Go" firstAttribute="top" secondItem="O0L-Cx-mJ4" secondAttribute="top" id="lhF-d0-81d"/>
+                            <constraint firstItem="4ZH-8j-qtU" firstAttribute="top" secondItem="57W-am-R7a" secondAttribute="bottom" constant="18" id="mfd-jb-trd"/>
+                            <constraint firstItem="gwE-FG-jpS" firstAttribute="leading" secondItem="O0L-Cx-mJ4" secondAttribute="leading" id="ov9-74-sVe"/>
+                            <constraint firstItem="CYO-BZ-Igh" firstAttribute="top" secondItem="gj9-tf-rVl" secondAttribute="top" id="qZX-mk-ubE"/>
+                            <constraint firstItem="zOC-OG-ytW" firstAttribute="centerX" secondItem="O0L-Cx-mJ4" secondAttribute="centerX" id="rwv-US-s6K"/>
+                            <constraint firstItem="ybu-tb-1CB" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4ZH-8j-qtU" secondAttribute="trailing" id="thD-xF-2PV"/>
+                            <constraint firstItem="Gg4-dY-tds" firstAttribute="centerX" secondItem="qjT-tg-fGq" secondAttribute="centerX" id="u3D-nj-wJQ"/>
+                            <constraint firstItem="fDa-eB-fAB" firstAttribute="top" secondItem="CYO-BZ-Igh" secondAttribute="bottom" constant="8" id="v0f-vE-gQO"/>
+                            <constraint firstItem="5fC-Xp-BVE" firstAttribute="top" secondItem="ybu-tb-1CB" secondAttribute="top" constant="8" id="wTN-rs-RIn"/>
+                            <constraint firstItem="gwE-FG-jpS" firstAttribute="trailing" secondItem="aFq-GG-a1e" secondAttribute="trailing" id="xWz-OB-L5E"/>
+                            <constraint firstItem="fDa-eB-fAB" firstAttribute="leading" secondItem="ybu-tb-1CB" secondAttribute="leading" constant="125.66666666666666" id="zOI-Zq-ZUX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Utj-dK-IOI"/>
                     <connections>
+                        <outlet property="energyText" destination="57W-am-R7a" id="O85-au-cJ8"/>
+                        <outlet property="foodText" destination="CYO-BZ-Igh" id="RkA-OA-F8U"/>
+                        <outlet property="travelText" destination="gj9-tf-rVl" id="BIE-gH-knF"/>
                         <outlet property="ukPieChart" destination="mnC-23-3Go" id="YvK-P5-j2R"/>
                         <outlet property="userPieChart" destination="O0L-Cx-mJ4" id="djs-nH-5p7"/>
                     </connections>
@@ -1253,6 +1402,22 @@ bag today?</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qUq-IZ-I2Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4017.5572519083967" y="110.56338028169014"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="yTF-L1-9lY">
+            <objects>
+                <viewController id="DeF-HP-qV7" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hkb-aK-sRx">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="q17-p3-gm5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="06o-lc-kbB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oCw-GB-CAS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4654" y="111"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wRg-G5-2aq">
@@ -1285,6 +1450,15 @@ bag today?</string>
         <image name="circle" width="42.666667938232422" height="42.666667938232422"/>
         <image name="save-the-world" width="170.66667175292969" height="170.66667175292969"/>
         <image name="square" width="42.666667938232422" height="42.666667938232422"/>
+        <namedColor name="energy">
+            <color red="1" green="0.82800000905990601" blue="0.043000001460313797" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="food">
+            <color red="0.16099999845027924" green="0.1289999932050705" blue="0.69900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="travel">
+            <color red="0.82800000905990601" green="0.1289999932050705" blue="0.88200002908706665" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
