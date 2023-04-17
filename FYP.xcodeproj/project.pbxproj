@@ -11,6 +11,7 @@
 		4F975D8F29D4F49100A31188 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F975D8E29D4F49100A31188 /* LoginViewController.swift */; };
 		4F975D9129D4F79A00A31188 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F975D9029D4F79A00A31188 /* GoogleService-Info.plist */; };
 		4F975D9429D4F89C00A31188 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4F975D9329D4F89B00A31188 /* FirebaseAuth */; };
+		4FAB28E729E97BBA00E68E80 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAB28E629E97BBA00E68E80 /* StatisticsViewController.swift */; };
 		4FD8AC7329D4D24600CA760A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD8AC7229D4D24600CA760A /* AppDelegate.swift */; };
 		4FD8AC7529D4D24600CA760A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD8AC7429D4D24600CA760A /* SceneDelegate.swift */; };
 		4FD8AC7729D4D24600CA760A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD8AC7629D4D24600CA760A /* ViewController.swift */; };
@@ -18,12 +19,16 @@
 		4FD8AC7C29D4D24900CA760A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FD8AC7B29D4D24900CA760A /* Assets.xcassets */; };
 		4FD8AC7F29D4D24900CA760A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FD8AC7D29D4D24900CA760A /* LaunchScreen.storyboard */; };
 		4FF0F18E29E7D9810017416D /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0F18D29E7D9810017416D /* FormViewController.swift */; };
+		576B8EB2E8148FC986E17C4A /* Pods_FYP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 083158D03CB62FD8D12D6CF3 /* Pods_FYP.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		083158D03CB62FD8D12D6CF3 /* Pods_FYP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FYP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB82B736B16BAFAC8ECF0E8 /* Pods-FYP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FYP.release.xcconfig"; path = "Target Support Files/Pods-FYP/Pods-FYP.release.xcconfig"; sourceTree = "<group>"; };
 		4F975D8C29D4F1EF00A31188 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		4F975D8E29D4F49100A31188 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4F975D9029D4F79A00A31188 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4FAB28E629E97BBA00E68E80 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		4FD8AC6F29D4D24600CA760A /* FYP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FYP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FD8AC7229D4D24600CA760A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FD8AC7429D4D24600CA760A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +38,7 @@
 		4FD8AC7E29D4D24900CA760A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FD8AC8029D4D24900CA760A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4FF0F18D29E7D9810017416D /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
+		F5DD70EDD11C17C0EC2CB491 /* Pods-FYP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FYP.debug.xcconfig"; path = "Target Support Files/Pods-FYP/Pods-FYP.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +47,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F975D9429D4F89C00A31188 /* FirebaseAuth in Frameworks */,
+				576B8EB2E8148FC986E17C4A /* Pods_FYP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27D7744C1C6C2413485D74C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				083158D03CB62FD8D12D6CF3 /* Pods_FYP.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4FD8AC6629D4D24600CA760A = {
 			isa = PBXGroup;
 			children = (
 				4FD8AC7129D4D24600CA760A /* FYP */,
 				4FD8AC7029D4D24600CA760A /* Products */,
+				8C858CA7785A75647FF013CC /* Pods */,
+				27D7744C1C6C2413485D74C3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +89,7 @@
 				4F975D8E29D4F49100A31188 /* LoginViewController.swift */,
 				4F975D8C29D4F1EF00A31188 /* SignupViewController.swift */,
 				4FD8AC7829D4D24600CA760A /* Main.storyboard */,
+				4FAB28E629E97BBA00E68E80 /* StatisticsViewController.swift */,
 				4FF0F18D29E7D9810017416D /* FormViewController.swift */,
 				4FD8AC7B29D4D24900CA760A /* Assets.xcassets */,
 				4FD8AC7D29D4D24900CA760A /* LaunchScreen.storyboard */,
@@ -81,6 +99,15 @@
 			path = FYP;
 			sourceTree = "<group>";
 		};
+		8C858CA7785A75647FF013CC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F5DD70EDD11C17C0EC2CB491 /* Pods-FYP.debug.xcconfig */,
+				3CB82B736B16BAFAC8ECF0E8 /* Pods-FYP.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -88,9 +115,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4FD8AC8329D4D24900CA760A /* Build configuration list for PBXNativeTarget "FYP" */;
 			buildPhases = (
+				AB6090118462C762BF3A8F26 /* [CP] Check Pods Manifest.lock */,
 				4FD8AC6B29D4D24600CA760A /* Sources */,
 				4FD8AC6C29D4D24600CA760A /* Frameworks */,
 				4FD8AC6D29D4D24600CA760A /* Resources */,
+				538C4C021C76F82D93DB17A4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,6 +183,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		538C4C021C76F82D93DB17A4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FYP/Pods-FYP-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FYP/Pods-FYP-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FYP/Pods-FYP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB6090118462C762BF3A8F26 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FYP-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4FD8AC6B29D4D24600CA760A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -165,6 +236,7 @@
 				4F975D8D29D4F1EF00A31188 /* SignupViewController.swift in Sources */,
 				4F975D8F29D4F49100A31188 /* LoginViewController.swift in Sources */,
 				4FD8AC7529D4D24600CA760A /* SceneDelegate.swift in Sources */,
+				4FAB28E729E97BBA00E68E80 /* StatisticsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +378,7 @@
 		};
 		4FD8AC8429D4D24900CA760A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5DD70EDD11C17C0EC2CB491 /* Pods-FYP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -333,6 +406,7 @@
 		};
 		4FD8AC8529D4D24900CA760A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CB82B736B16BAFAC8ECF0E8 /* Pods-FYP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

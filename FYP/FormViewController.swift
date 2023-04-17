@@ -6,16 +6,17 @@
 //
 
 import UIKit
-//this variable stores the total carbon footprint of the user which would then be updated on the home page
-var toalCF = 0
 
-//these three variables are to keep track of each category's carbon footprint in kg CO2 emissions
-//these would then be used to form the chart for statistics page
-var foodCF = 0
-var travelCF = 0
-var energyCF = 0
 class FormViewController: UIViewController {
     
+    //this variable stores the total carbon footprint of the user which would then be updated on the home page
+    var toalCF = 0
+
+    //these three variables are to keep track of each category's carbon footprint in kg CO2 emissions
+    //these would then be used to form the chart for statistics page
+    var foodCF = 0
+    var travelCF = 0
+    var energyCF = 0
     //stores the kg CO2 emitted per km for the 5 modes of travel
     var modeTravel = 0
     
@@ -570,10 +571,11 @@ class FormViewController: UIViewController {
         //converting a string of numeric input for diatnce travelled to integer value
         let distance: Int? = Int(distanceTravelled.text!)
         //the total travel carbon footprint would be the mode of travel selected by the user x the distance travelled in km
-        travelCF = modeTravel * distance!
+        travelCF =  distance! * modeTravel
+        travelCF = travelCF/1000
         
         //converting travelCF value from grams to kilograms
-        travelCF = travelCF/1000
+        //travelCF = travelCF/1000
         print("The travel carbon footprint is\(travelCF)")
         
         //converting a string of numeric input for screen time by user to integer format
@@ -594,6 +596,30 @@ class FormViewController: UIViewController {
         energyCF = energyCF/1000
         print("The energy carbon footprint is\(energyCF)")
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "carbon_footprint" {
+            let destination = segue.destination as! StatisticsViewController
+            destination.variable1 = foodCF/1000
+            
+            let distance: Int? = Int(distanceTravelled.text!)
+            travelCF =  distance! * modeTravel
+            travelCF = travelCF/1000
+            //storing the value of travelCF in variable2 for it to be used in StatisticsViewController
+            destination.variable2 = travelCF
+            
+            
+            let screen: Int? = Int(screenTime.text!)
+            var screenCF = 0
+            var totalScreenCF = 0
+            screenCF += 1700
+            totalScreenCF = screenCF * screen!
+            energyCF += totalScreenCF
+            energyCF = energyCF/1000
+            //storing the value of energyCF in variable3 for it to be used in StatisticsViewController
+            destination.variable3 = energyCF
+        }
     }
     /*
     // MARK: - Navigation

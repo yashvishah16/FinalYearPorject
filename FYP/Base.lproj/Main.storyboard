@@ -371,7 +371,7 @@ CO2 emission</string>
         <!--Form View Controller-->
         <scene sceneID="b02-l2-TjU">
             <objects>
-                <viewController id="t9F-I1-q2s" customClass="FormViewController" customModule="FYP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="carbon_footprint" id="t9F-I1-q2s" customClass="FormViewController" customModule="FYP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zna-3g-lGx">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -903,6 +903,7 @@ bag today?</string>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="submitBtnTapped:" destination="t9F-I1-q2s" eventType="touchUpInside" id="dbX-Il-cya"/>
+                                                    <segue destination="tKI-Pv-hou" kind="show" identifier="carbon_footprint" id="hK9-Bk-tFH"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Herbs &amp; Spices" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ar3-77-7nE">
@@ -1170,6 +1171,88 @@ bag today?</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZQn-7J-eF3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3330.5343511450378" y="109.85915492957747"/>
+        </scene>
+        <!--Statistics View Controller-->
+        <scene sceneID="AWx-3e-0bT">
+            <objects>
+                <viewController id="tKI-Pv-hou" customClass="StatisticsViewController" customModule="FYP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1wE-CU-zHC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" id="qjT-tg-fGq">
+                                <rect key="frame" x="45" y="761" width="302" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KrJ-Hp-dTG">
+                                        <rect key="frame" x="0.0" y="0.0" width="66" height="57"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="18497442851530273523-128"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4o-DO-p6q">
+                                        <rect key="frame" x="78" y="0.0" width="66.666666666666686" height="57"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="8471584441553857633-128"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUb-l9-Y8m">
+                                        <rect key="frame" x="156.66666666666666" y="0.0" width="66.666666666666657" height="57"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="5796614481548336242-128"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZiJ-v7-YsD">
+                                        <rect key="frame" x="235.33333333333334" y="0.0" width="66.666666666666657" height="57"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="132352648716276482833764-128"/>
+                                    </button>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="lRN-B3-S3p"/>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="save-the-world" translatesAutoresizingMaskIntoConstraints="NO" id="fnK-WW-EaU">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" red="0.26889481300000001" green="0.46907216489999998" blue="0.27802031890000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O0L-Cx-mJ4" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="9" y="140" width="185" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="GMs-4l-3q8"/>
+                                    <constraint firstAttribute="width" constant="185" id="JlL-wR-g81"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="S4z-B2-iyK"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mnC-23-3Go" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="202" y="140" width="185" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="W1G-d1-wHh"/>
+                                    <constraint firstAttribute="width" constant="185" id="i4W-rw-Xpp"/>
+                                    <constraint firstAttribute="height" constant="200" id="j56-vw-F4M"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ybu-tb-1CB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="O0L-Cx-mJ4" firstAttribute="leading" secondItem="1wE-CU-zHC" secondAttribute="leadingMargin" constant="-7" id="5qr-cC-jxP"/>
+                            <constraint firstAttribute="trailing" secondItem="fnK-WW-EaU" secondAttribute="trailing" id="9BD-eK-wQL"/>
+                            <constraint firstItem="O0L-Cx-mJ4" firstAttribute="top" secondItem="ybu-tb-1CB" secondAttribute="top" constant="37" id="C1O-S4-6F3"/>
+                            <constraint firstAttribute="bottom" secondItem="fnK-WW-EaU" secondAttribute="bottom" id="JmQ-U4-JBO"/>
+                            <constraint firstItem="fnK-WW-EaU" firstAttribute="top" secondItem="1wE-CU-zHC" secondAttribute="top" id="Msg-yq-dgo"/>
+                            <constraint firstItem="fnK-WW-EaU" firstAttribute="leading" secondItem="1wE-CU-zHC" secondAttribute="leading" id="YhV-TU-SFe"/>
+                            <constraint firstItem="mnC-23-3Go" firstAttribute="leading" secondItem="O0L-Cx-mJ4" secondAttribute="trailing" constant="8" id="fv3-e2-rl9"/>
+                            <constraint firstItem="mnC-23-3Go" firstAttribute="top" secondItem="O0L-Cx-mJ4" secondAttribute="top" id="lhF-d0-81d"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Utj-dK-IOI"/>
+                    <connections>
+                        <outlet property="ukPieChart" destination="mnC-23-3Go" id="YvK-P5-j2R"/>
+                        <outlet property="userPieChart" destination="O0L-Cx-mJ4" id="djs-nH-5p7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qUq-IZ-I2Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4017.5572519083967" y="110.56338028169014"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wRg-G5-2aq">
