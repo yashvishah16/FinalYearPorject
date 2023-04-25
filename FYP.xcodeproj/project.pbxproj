@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F3E53D729F14A5800AE087F /* RecommendationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3E53D629F14A5800AE087F /* RecommendationsViewController.swift */; };
 		4F975D8D29D4F1EF00A31188 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F975D8C29D4F1EF00A31188 /* SignupViewController.swift */; };
 		4F975D8F29D4F49100A31188 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F975D8E29D4F49100A31188 /* LoginViewController.swift */; };
 		4F975D9129D4F79A00A31188 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4F975D9029D4F79A00A31188 /* GoogleService-Info.plist */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		083158D03CB62FD8D12D6CF3 /* Pods_FYP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FYP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB82B736B16BAFAC8ECF0E8 /* Pods-FYP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FYP.release.xcconfig"; path = "Target Support Files/Pods-FYP/Pods-FYP.release.xcconfig"; sourceTree = "<group>"; };
+		4F3E53D629F14A5800AE087F /* RecommendationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationsViewController.swift; sourceTree = "<group>"; };
 		4F975D8C29D4F1EF00A31188 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		4F975D8E29D4F49100A31188 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4F975D9029D4F79A00A31188 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				4F975D8E29D4F49100A31188 /* LoginViewController.swift */,
 				4F975D8C29D4F1EF00A31188 /* SignupViewController.swift */,
 				4FD8AC7829D4D24600CA760A /* Main.storyboard */,
+				4F3E53D629F14A5800AE087F /* RecommendationsViewController.swift */,
 				4FAB28E629E97BBA00E68E80 /* StatisticsViewController.swift */,
 				4FF0F18D29E7D9810017416D /* FormViewController.swift */,
 				4FD8AC7B29D4D24900CA760A /* Assets.xcassets */,
@@ -235,6 +238,7 @@
 				4FD8AC7329D4D24600CA760A /* AppDelegate.swift in Sources */,
 				4F975D8D29D4F1EF00A31188 /* SignupViewController.swift in Sources */,
 				4F975D8F29D4F49100A31188 /* LoginViewController.swift in Sources */,
+				4F3E53D729F14A5800AE087F /* RecommendationsViewController.swift in Sources */,
 				4FD8AC7529D4D24600CA760A /* SceneDelegate.swift in Sources */,
 				4FAB28E729E97BBA00E68E80 /* StatisticsViewController.swift in Sources */,
 			);

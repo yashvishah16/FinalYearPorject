@@ -122,6 +122,21 @@ class FormViewController: UIViewController {
     //this text field is to store user's digital screen time for the day in per hour format
     @IBOutlet weak var screenTime: UITextField!
     
+    //this is to provide recommendations through segue to RecommendationsViewController
+    var label1 = ""
+    var carbon1 = 0.0
+    var label2 = ""
+    var carbon2 = 0.0
+    var label3 = ""
+    var carbon3 = 0.0
+    var label4 = ""
+    var carbon4 = 0.0
+    var label5 = ""
+    var carbon5 = 0.0
+    var label6 = ""
+    var carbon6 = 0.0
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //this is the delegate method used to restrict text field to accept only numeric input from user
@@ -596,6 +611,8 @@ class FormViewController: UIViewController {
         energyCF = energyCF/1000
         print("The energy carbon footprint is\(energyCF)")
         
+        
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -619,6 +636,120 @@ class FormViewController: UIViewController {
             energyCF = energyCF/1000
             //storing the value of energyCF in variable3 for it to be used in StatisticsViewController
             destination.variable3 = energyCF
+            
+            //conditions for updating recommendation 1 in RecommendationsViewController
+            if (dietType.text == "NVG" || dietType.text == "non-vegetarian" || dietType.text == "nvg") {
+                label1 = "Reduce meat consumption by having plant-based sources like lentils, beans and tofu as an alternative to meat a few times a week."
+                carbon1 = 2.0
+            }
+            if (dietType.text == "VG" || dietType.text == "vegetarian" || dietType.text == "vg"){
+                label1 = "Choose to buy fresh produce that is in season and locally grown in the UK to reduce the carbon footprint of transportation and refrigeration."
+                carbon1 = 1.2
+            }
+            if(dietType.text == "V" || dietType.text == "vegan" || dietType.text == "v"){
+                label1 = "Even thoug you are on the most sustainable diet, choose to buy from local co-ops to reduce the carbon footprint of food transportation."
+                carbon1 = 0.9
+            }
+            
+            //conditions for updating recommendation 2 in RecommendationsViewController
+            if (flag1 == true) {
+                label2 = "Choose plant-based alternatives such as almond, soy or oat milk to reduce the carbon footprint of dairy production."
+                carbon2 = 1.6
+            }
+            else if (flag6 == true){
+                label2 = "Choose to buy whole grain bread instead of white bread to stay healthy."
+                carbon2 = 0.7
+            }
+            else if (flag8 == true){
+                label2 = "Choose to buy nutella, jam, honey and butter in glass jars or metal containers to reduce packaging waste."
+                carbon2 = 0.9
+            }
+            else if (flag13 == true){
+                label2 = "Choose to buy soy or coconut based yogurt and cream to go sustainable."
+                carbon2 = 0.8
+            }
+            else if (flag12 == true){
+                label2 = "Choose to buy nuts, seeds, herbs and spices in bulk to save time and reduce carbon footprint of packaging waste."
+                carbon2 = 0.6
+            }
+            else {
+                label2 = "Choose to reduce food waste by planning meals in advance, using leftovers and storing food correctly."
+                carbon2 = 1.2
+            }
+            
+            //conditions for updating recommendation 3 in RecommendationsViewController
+            if (flag19 == true){
+                label3 = "Choose non-stop flights and fly economy class. Consider purchasing carbon offsets to compensate for the emissions produced by your flight."
+                carbon3 = 35.0
+            }
+            else if (flag20 == true){
+                label3 = "When travelling by train, opt for economy class instead of first class to reduce the amount of space you take on the train hence, reducing emissions per passenger."
+                carbon3 = 7.0
+            }
+            else if (flag21 == true){
+                label3 = "Even though bus being means of public transport is a sustainable option, plan your route in advance and choose direct routes with no stops or changes to reduce travel time and emissions."
+                carbon3 = 4.0
+            }
+            else if (flag22 == true){
+                label3 = "If car is your daily mode of travel, consider investing in an electric or hybrid car instead of traditional petrol and diesel cars as they produce fewer emissions."
+                carbon3 = 2.0
+            }
+            else if (flag23 == true){
+                label3 = "While you're already using bicycle which is the most sustainble mode of travel, you can choose to ride electric bike or consider walking when possible."
+                carbon3 = 3.0
+            }
+            
+            //conditions for updating recommendation 4 in RecommendationsViewController
+            if (flag24 == true){
+                label4 = "Reduce your waste by opting for reusable alternatives such as cloth napkins onstead of paper ones, resuable containers instead of plastic wrap or foil and refillable water bottles instead of disposable ones."
+                carbon4 = 1.8
+            }
+            else if (flag25 == true){
+                label4 = "Reduce packaging waste by choosing products with minimal packaging, bringing your own reusable bags when shopping and opting for loose products instead of pre-packaged items."
+                carbon4 = 0.6
+            }
+            
+            //conditions for updating recommendation 5 in RecommendationsViewController
+            if (flag26 == true){
+                label5 = "Support policies and programs that encourage the use of renewable energy sources such as subsidies for solar panel installation or net metering programs that allow homeowners to sell excess energy back to the grid."
+                carbon5 = 5.4
+            }
+            else if (flag27 == true){
+                label5 = "Make sure to turn off lights and electronics when not in use, or use power strips to easilt turn off multiple devices ar once."
+                carbon5 = 0.4
+            }
+            
+            //conditions for updating recommendation 6 in RecommendationsViewController
+            let screenText = screenTime.text
+            if (screenText == "13" || screenText == "14" || screenText == "15" || screenText == "16" || screenText == "17" || screenText == "18" || screenText == "19" || screenText == "20" || screenText == "21" || screenText == "22" || screenText == "23" || screenText == "24") {
+                label6 = "Since your screen time is more than 12 hours a day, consider taking long breaks every hour or so, and using energy-saving modes like low power mode."
+                carbon6 = 0.4
+            }
+            else if (screenText == "5" || screenText == "6" || screenText == "8" || screenText == "9" || screenText == "10" || screenText == "11" || screenText == "12") {
+                label6 = "Use energy-saving settings on your devices, such as dimming time and setting a shorter auto lock time to reduce energy consumption."
+                carbon6 = 0.3
+            }
+            else if (screenText == "4" || screenText == "3" || screenText == "2" || screenText == "1") {
+                label6 = "Since your screen time is less than 5 hours a day, consider using a phone with a smaller screen size or a lower resolution as it uses less energy."
+                carbon6 = 0.7
+            }
+            else {
+                label6 = "Set limits on your screen time and take breaks every 30 minutes to reduce eye strain and fatigue."
+                carbon6 = 0.2
+            }
+            //storing the value of recommendation labels along with carbon emissions saved values in StatisticsViewController
+            destination.rec1 = label1
+            destination.number1 = carbon1
+            destination.rec2 = label2
+            destination.number2 = carbon2
+            destination.rec3 = label3
+            destination.number3 = carbon3
+            destination.rec4 = label4
+            destination.number4 = carbon4
+            destination.rec5 = label5
+            destination.number5 = carbon5
+            destination.rec6 = label6
+            destination.number6 = carbon6
         }
     }
     /*
