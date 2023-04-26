@@ -8,7 +8,7 @@
 import UIKit
 
 class RecommendationsViewController: UIViewController {
-
+    
     var label1 = ""
     var carbon1 = 0.0
     var label2 = ""
@@ -180,7 +180,6 @@ class RecommendationsViewController: UIViewController {
             progress -= 1/7
         }
     }
-    
     
     
     

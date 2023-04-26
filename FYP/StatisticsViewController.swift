@@ -9,7 +9,7 @@ import UIKit
 import Charts
 class StatisticsViewController: UIViewController {
     
-    //this is to get data stored in foodCF, travelCF and energyCF variables from FormViewController
+    //this is to get data stored in foodCF, travelCF, energyCF and totalCF variables from FormViewController
     var variable1 = 0
     var variable2 = 0
     var variable3 = 0

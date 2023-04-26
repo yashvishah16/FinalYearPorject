@@ -8,10 +8,8 @@
 import UIKit
 
 class FormViewController: UIViewController {
-    
-    //this variable stores the total carbon footprint of the user which would then be updated on the home page
-    var toalCF = 0
 
+    var totalCF = 0
     //these three variables are to keep track of each category's carbon footprint in kg CO2 emissions
     //these would then be used to form the chart for statistics page
     var foodCF = 0
@@ -19,6 +17,7 @@ class FormViewController: UIViewController {
     var energyCF = 0
     //stores the kg CO2 emitted per km for the 5 modes of travel
     var modeTravel = 0
+    
     
     //this field stores the user's diet type
     @IBOutlet weak var dietType: UITextField!
@@ -142,7 +141,7 @@ class FormViewController: UIViewController {
         //this is the delegate method used to restrict text field to accept only numeric input from user
         distanceTravelled.delegate = self
         screenTime.delegate = self
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -611,7 +610,7 @@ class FormViewController: UIViewController {
         energyCF = energyCF/1000
         print("The energy carbon footprint is\(energyCF)")
         
-        
+        totalCF = foodCF + travelCF + energyCF
         
     }
     
@@ -636,6 +635,7 @@ class FormViewController: UIViewController {
             energyCF = energyCF/1000
             //storing the value of energyCF in variable3 for it to be used in StatisticsViewController
             destination.variable3 = energyCF
+            
             
             //conditions for updating recommendation 1 in RecommendationsViewController
             if (dietType.text == "NVG" || dietType.text == "non-vegetarian" || dietType.text == "nvg") {
